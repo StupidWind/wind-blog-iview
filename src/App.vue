@@ -4,7 +4,6 @@
       <div class="main-block">
         <wind-header></wind-header>
       </div>
-      <router-link to="/article/list">跳转文章页面</router-link>
       <div class="main-block main-content">
         <router-view />
       </div>

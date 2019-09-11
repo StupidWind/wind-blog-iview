@@ -24,7 +24,6 @@ export default {
         { id: 2, menuName: "评论", menuUrl: "/comment/list" },
         { id: 3, menuName: "留言板", menuUrl: "/leaveMessageBorad/list" },
         { id: 4, menuName: "友情链接", menuUrl: "/friendshipLink/list"}
-        // { id: 5, menuName: "资源", menuUrl: "/demo/4" }
       ]
     };
   },
@@ -81,6 +80,7 @@ export default {
 }
 
 .container > .navbar > li {
+  list-style-type: none;
   font-size: 15px;
   margin: 0 5px;
 }

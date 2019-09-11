@@ -9,11 +9,10 @@ import LeaveMessageList from '../components/leaveMessageBorad/LeaveMessageList'
 Vue.use(Router)
 
 export default new Router({
-    routes: [
-        // {
-        //     path: '/header',
-        //     component: WindHeader
-        // },
+    routes: [{
+            path: '/header',
+            component: WindHeader
+        },
         {
             path: '/article/list',
             component: ArticleList

@@ -1,44 +1,7 @@
 <template>
   <div class="article-container">
     <h1 class="title">文章列表</h1>
-
     
-    <!-- <table class="article-list">
-      <thead>
-        <tr>
-          <th>文章标题</th>
-          <th>文章简介</th>
-          <th>点赞数</th>
-          <th>阅读数</th>
-          <th>发布时间</th>
-          <th>操作</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="article in articleList" :key="article.articleId">
-          <td>{{article.title}}</td>
-          <td>{{article.brief}}</td>
-          <td>{{article.thumbsUpCount}}</td>
-          <td>{{article.readCount}}</td>
-          <td>{{article.createTime}}</td>
-          <td>
-            <ul>
-              <li>
-                <a>查看</a>
-              </li>
-              <li>
-                <a>编辑</a>
-              </li>
-              <li>
-                <a>删除</a>
-              </li>
-            </ul>
-          </td>
-        </tr>
-      </tbody>
-    </table> -->
-   
-
     <Table :columns="articleColumns" :data="articleList">
       <template slot-scope="{ row }" slot="title">
         <span>{{ row.title }}</span>
@@ -77,13 +40,15 @@ export default {
         { title: "阅读数", key: "readCount" },
         { title: "发布时间", key: "createTime" }
       ],
-      articleList: [{
-        "title": "test",
-        "brief": "test",
-        "thumbsUpCount": "test",
-        "readCount": "test",
-        "createTime": "test"
-      }]
+      articleList: [
+        {
+          title: "test",
+          brief: "test",
+          thumbsUpCount: "test",
+          readCount: "test",
+          createTime: "test"
+        }
+      ]
     };
   },
   methods: {
@@ -113,6 +78,4 @@ export default {
   padding: 5px 10px;
 }
 
-.article-container > .article-list {
-}
 </style>
