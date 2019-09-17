@@ -12,10 +12,6 @@ import 'mavon-editor/dist/css/index.css'
 Vue.use(iview)
 Vue.use(mavonEditor)
 
-// import { Table } from 'iview';
-// Vue.component('Button', Button);
-// Vue.component('Table', Table);
-
 Vue.config.productionTip = false
     /* eslint-disable no-new */
 new Vue({

@@ -86,11 +86,11 @@ export default {
 }
 
 .navbar > li > a {
-  color: darkgrey;
+  color: #666666;
 }
 
 .navbar > li > a:hover {
-  color: dimgray;
+  color: #333333;
 }
 
 .navbar > li > a:active {

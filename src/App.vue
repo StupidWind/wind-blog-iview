@@ -26,7 +26,7 @@ export default {
 body {
   margin: 0;
   padding: 0;
-  background-color: ghostwhite;
+  background-color: #ABCDEF;
 }
 
 #app {
@@ -40,7 +40,7 @@ body {
 }
 
 #app > .main-container > .main-block {
-  background-color: snow;
+  background-color: #ABCDEF;
 }
 
 #app > .main-container > .main-content {

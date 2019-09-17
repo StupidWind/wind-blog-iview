@@ -7,7 +7,6 @@
           <p>{{article.title}}</p>
         </router-link>
       </div>
-
       <p class="article-brief">{{article.brief}}</p>
       <Icon type="md-heart" />
       {{article.thumbsUpCount}}
@@ -24,15 +23,7 @@ import { getArticleList } from "@/apis/article-request.js";
 export default {
   data() {
     return {
-      articleList: [
-        {
-          title: "test",
-          brief: "test",
-          thumbsUpCount: "test",
-          readCount: "test",
-          createTime: "test"
-        }
-      ],
+      articleList: [],
       page: 1,
       pageSize: 10,
       pageTotal: 0
