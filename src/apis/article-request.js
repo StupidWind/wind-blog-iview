@@ -7,3 +7,10 @@ export const getArticleList = params => {
         method: 'get'
     });
 };
+
+export const getArticleDetail = id => {
+    return axios.request({
+        url: '/article/get/' + id,
+        method: 'get'
+    });
+};

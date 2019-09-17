@@ -1,45 +1,29 @@
 <template>
   <div class="article-container">
     <h1 class="title">文章列表</h1>
-    
-    <Table :columns="articleColumns" :data="articleList">
-      <template slot-scope="{ row }" slot="title">
-        <span>{{ row.title }}</span>
-      </template>
-      <template slot-scope="{ row }" slot="brief">
-        <span>{{ row.brief }}</span>
-      </template>
-      <template slot-scope="{ row }" slot="thumbsUpCount">
-        <span>{{ row.thumbsUpCount }}</span>
-      </template>
-      <template slot-scope="{ row }" slot="readCount">
-        <span>{{ row.readCount }}</span>
-      </template>
-      <template slot-scope="{ row }" slot="createTime">
-        <span>{{ row.createTime }}</span>
-      </template>
-      <template slot-scope="{ row }" slot="action">
-        <Button type="success" @click="viewArticle(row.articleId)">查看</Button>
-        <Button type="primary" @click="editArticle(row.articleId)">编辑</Button>
-        <Button type="error" @click="delArticle(row.articleId)">删除</Button>
-      </template>
-    </Table>
+    <Card v-for="article in articleList" :key="article.articleId">
+      <div slot="title">
+        <router-link :to="article.articleId|detailRoute">
+          <p>{{article.title}}</p>
+        </router-link>
+      </div>
+
+      <p class="article-brief">{{article.brief}}</p>
+      <Icon type="md-heart" />
+      {{article.thumbsUpCount}}
+      <Icon type="md-eye" />
+      {{article.readCount}}
+      <p>发布于 {{article.createTime|dateFormat}}</p>
+    </Card>
+    <Page :total="pageTotal" :current="page" :page-size="pageSize" @on-change="searchArticle"></Page>
   </div>
 </template>
 
 <script>
 import { getArticleList } from "@/apis/article-request.js";
-
 export default {
   data() {
     return {
-      articleColumns: [
-        { title: "标题", key: "title" },
-        { title: "简介", key: "brief" },
-        { title: "点赞数", key: "thumbsUpCount" },
-        { title: "阅读数", key: "readCount" },
-        { title: "发布时间", key: "createTime" }
-      ],
       articleList: [
         {
           title: "test",
@@ -48,18 +32,60 @@ export default {
           readCount: "test",
           createTime: "test"
         }
-      ]
+      ],
+      page: 1,
+      pageSize: 10,
+      pageTotal: 0
     };
   },
   methods: {
-    searchArticle() {
-      getArticleList().then(res => {
+    searchArticle(thePage) {
+      thePage = thePage == null ? 1 : thePage;
+      let param = {
+        pageNum: thePage,
+        pageSize: this.pageSize
+      };
+      getArticleList(param).then(res => {
         this.articleList = res.data.list;
+        this.page = res.data.page;
+        this.pageTotal = res.data.total;
       });
     },
     viewArticle(arttcleId) {},
     editArticle(arttcleId) {},
     delArticle(articleId) {}
+  },
+  filters: {
+    dateFormat(timestamp) {
+      let date = new Date(timestamp);
+      let year = date.getFullYear();
+      let month = date.getMonth() - 1;
+      let day = date.getDate();
+      let hour = date.getHours();
+      let minutes = date.getMinutes();
+      let second = date.getSeconds();
+
+      let fillZero = function(num) {
+        return num < 10 ? "0" + num : num;
+      };
+
+      let dateStr =
+        year +
+        "-" +
+        fillZero(month) +
+        "-" +
+        fillZero(day) +
+        " " +
+        fillZero(hour) +
+        ":" +
+        fillZero(minutes) +
+        ":" +
+        fillZero(second);
+      return dateStr;
+    },
+    detailRoute(articleId) {
+      return "/article/detail/" + articleId;
+    }
   },
   created() {
     this.searchArticle();
@@ -78,4 +104,12 @@ export default {
   padding: 5px 10px;
 }
 
+.ivu-card {
+  margin-top: 10px;
+}
+
+.ivu-card .article-brief {
+  margin: 5px 2px;
+  padding: 2px;
+}
 </style>

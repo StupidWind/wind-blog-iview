@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import WindHeader from '../components/WindHeader'
 import ArticleList from '../components/article/ArticleList'
+import ArticleDetail from '../components/article/ArticleDetail'
 import CommentList from '../components/comment/CommentList'
 import FriendshipList from '../components/firendshipLink/FriendshipLinkList'
 import LeaveMessageList from '../components/leaveMessageBorad/LeaveMessageList'
@@ -16,6 +17,10 @@ export default new Router({
         {
             path: '/article/list',
             component: ArticleList
+        },
+        {
+            path: '/article/detail/:id',
+            component: ArticleDetail
         },
         {
             path: '/comment/list',
