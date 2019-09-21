@@ -3,13 +3,12 @@
     <div class="article-head">
       <h2>标题</h2>
       <input v-model="articleTitle" />
-      <p>
+      <p v-if="publishTime != null">
         发布于
-        <Time :time="publishTime" :interval="timeInterval"></Time>
+        <Time :time="publishTime" ></Time>
       </p>
     </div>
     <mavon-editor ref="mavon" v-model="markdownContent" @save="saveMavon"></mavon-editor>
-    <!-- <Button type="primary" @click="saveArticle">保存</Button> -->
   </div>
 </template>
 
@@ -20,8 +19,7 @@ export default {
   data() {
     return {
       articleTitle: "",
-      publishTime: new Date().valueOf(),
-      timeInterval: 1,
+      publishTime: null,
       articleInfo: null,
       markdownContent: ""
     };
@@ -34,7 +32,6 @@ export default {
         vm.markdownContent = res.data.data.mdContent;
         vm.articleTitle = res.data.data.title;
         vm.publishTime = res.data.data.createTime;
-        vm.timeInterval = 60;
       });
     },
     saveMavon(markdownValue, htmlValue) {
@@ -42,7 +39,7 @@ export default {
       let article = vm.articleInfo;
       let params = {
         articleId: article.articleId,
-        title: article.title,
+        title: vm.articleTitle,
         brief: article.brief,
         mdContent: markdownValue,
         htmlContent: htmlValue,
@@ -54,12 +51,6 @@ export default {
       saveArticle(params).then(res => {
         vm.$Message.success(res.data.msg);
       });
-    },
-    saveArticle() {
-      this.$refs.mavon.save();
-      // saveArticle(params).then(res => {
-      // console.log(res);
-      // });
     }
   },
   created() {
@@ -70,4 +61,7 @@ export default {
 </script>
 
 <style>
+.markdown-body {
+  margin: 20px 0;
+}
 </style>

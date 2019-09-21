@@ -1,11 +1,21 @@
 <template>
   <div class="article-container">
-    <h1 class="title">文章列表</h1>
+    <div class="article-list-header">
+      <h1 id="page-title">文章列表</h1>
+      <div class="toolbar">
+        <Button class="toolbar-btn" icon="ios-add-circle-outline" type="success" @click="newArticle">新建文章</Button>
+      </div>
+    </div>
     <Card v-for="article in articleList" :key="article.articleId">
-      <div slot="title">
-        <router-link :to="article.articleId|detailRoute">
-          <p>{{article.title}}</p>
-        </router-link>
+      <div slot="title" class="article-card-title">
+        <!-- <router-link :to="article.articleId|detailRoute"> -->
+        <p class="article-title">{{article.title}}</p>
+        <div class="toolbar">
+          <Button class="toolbar-btn" icon="md-search" shape="circle" type="success"></Button>
+          <Button class="toolbar-btn" icon="md-create" shape="circle" type="info"></Button>
+          <Button class="toolbar-btn" icon="md-close" shape="circle" type="error"></Button>
+        </div>
+        <!-- </router-link> -->
       </div>
       <p class="article-brief">{{article.brief}}</p>
       <Icon type="md-heart" />
@@ -41,6 +51,9 @@ export default {
         this.page = res.data.page;
         this.pageTotal = res.data.total;
       });
+    },
+    newArticle() {
+      this.$router.push({ path: "/article/detail/" });
     },
     viewArticle(arttcleId) {},
     editArticle(arttcleId) {},
@@ -91,8 +104,27 @@ export default {
   flex-direction: column;
 }
 
-.article-container > .title {
-  padding: 5px 10px;
+.article-list-header {
+  display: flex;
+}
+
+.article-list-header > #page-title {
+  flex: 2 1 120px;
+}
+
+.toolbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-right: 10px;
+}
+
+.toolbar-btn {
+  margin: 0 2px;
+}
+
+.article-card-title {
+  display: flex;
 }
 
 .ivu-card {
@@ -107,5 +139,4 @@ export default {
 .ivu-page {
   margin: 10px auto;
 }
-
 </style>
