@@ -3,17 +3,31 @@
     <div class="article-list-header">
       <h1 id="page-title">文章列表</h1>
       <div class="toolbar">
-        <Button class="toolbar-btn" icon="ios-add-circle-outline" type="success" @click="newArticle">新建文章</Button>
+        <Button icon="ios-add-circle-outline" type="success" @click="newArticle">新建文章</Button>
       </div>
     </div>
     <Card v-for="article in articleList" :key="article.articleId">
       <div slot="title" class="article-card-title">
-        <!-- <router-link :to="article.articleId|detailRoute"> -->
         <p class="article-title">{{article.title}}</p>
         <div class="toolbar">
-          <Button class="toolbar-btn" icon="md-search" shape="circle" type="success"></Button>
-          <Button class="toolbar-btn" icon="md-create" shape="circle" type="info"></Button>
-          <Button class="toolbar-btn" icon="md-close" shape="circle" type="error"></Button>
+          <Button
+            icon="md-search"
+            shape="circle"
+            type="success"
+            @click="viewArticle(article.articleId)"
+          ></Button>
+          <Button
+            icon="md-create"
+            shape="circle"
+            type="info"
+            @click="editArticle(article.articleId)"
+          ></Button>
+          <Button
+            icon="md-close"
+            shape="circle"
+            type="error"
+            @click="delArticle(article.articleId)"
+          ></Button>
         </div>
         <!-- </router-link> -->
       </div>
@@ -29,7 +43,7 @@
 </template>
 
 <script>
-import { getArticleList } from "@/apis/article-request.js";
+import { getArticleList, delArticle } from "@/apis/article-request.js";
 export default {
   data() {
     return {
@@ -53,11 +67,54 @@ export default {
       });
     },
     newArticle() {
-      this.$router.push({ path: "/article/detail/" });
+      this.$router.push({
+        name: "article-detail",
+        params: { type: "create" }
+      });
     },
-    viewArticle(arttcleId) {},
-    editArticle(arttcleId) {},
-    delArticle(articleId) {}
+    viewArticle(articleId) {
+      this.$router.push({
+        name: "article-detail",
+        params: {
+          type: "view",
+          articleId: articleId
+        }
+      });
+    },
+    editArticle(articleId) {
+      this.$router.push({
+        name: "article-detail",
+        params: {
+          type: "edit",
+          articleId: articleId
+        }
+      });
+    },
+    delArticle(articleId) {
+      this.$Modal.confirm({
+        title: "删除文章",
+        content: "<p>确定删除吗 ?</p>",
+        onOk: () => {
+          delArticle(articleId).then(res => {
+            if (res.data.success) {
+              this.$Message.success(res.data.msg);
+              let aIndex = this.articleList.findIndex(article => {
+                if (article.articleId == articleId) {
+                  return true;
+                }
+              });
+              this.articleList.splice(aIndex, 1);
+            } else {
+              this.$Message.error(res.data.msg);
+            }
+            this.$Modal.remove();
+          });
+        },
+        onCancle: () => {
+          this.$Modal.remove();
+        }
+      });
+    }
   },
   filters: {
     dateFormat(timestamp) {
@@ -119,7 +176,7 @@ export default {
   margin-right: 10px;
 }
 
-.toolbar-btn {
+.toolbar > .ivu-btn {
   margin: 0 2px;
 }
 
