@@ -103,4 +103,9 @@ export default {
   margin: 5px 2px;
   padding: 2px;
 }
+
+.ivu-page {
+  margin: 10px auto;
+}
+
 </style>

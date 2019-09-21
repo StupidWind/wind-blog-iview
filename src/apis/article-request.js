@@ -24,3 +24,12 @@ export const delArticle = id => {
         method: 'delete'
     });
 };
+
+// 保存文章
+export const saveArticle = params => {
+    return axios.request({
+        data: params,
+        url: '/article/save',
+        method: 'post'
+    });
+};

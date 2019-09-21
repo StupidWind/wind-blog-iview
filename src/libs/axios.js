@@ -86,6 +86,35 @@ class HttpRequest {
         })
     }
     request(options) {
+        axios.defaults.transformRequest = [
+            function(data, config) {
+                if (!config['Content-Type']) {
+                    let ret = '';
+                    for (let it in data) {
+                        ret += encodeURIComponent(it) + '=' + encodeURIComponent(data[it]) + '&';
+                    }
+                    return ret;
+                }
+                switch (config['Content-Type'].toLowerCase()) {
+                    case 'application/json':
+                        {
+                            return JSON.stringify(data);
+                        }
+                    case 'multipart/form-data':
+                        {
+                            return data;
+                        }
+                    default:
+                        {
+                            let ret = '';
+                            for (let it in data) {
+                                ret += encodeURIComponent(it) + '=' + encodeURIComponent(data[it]) + '&';
+                            }
+                            return ret;
+                        }
+                }
+            }
+        ];
         const instance = axios.create({
             baseURL: this.baseUrl
         })
