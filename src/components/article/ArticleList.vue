@@ -29,7 +29,6 @@
             @click="delArticle(article.articleId)"
           ></Button>
         </div>
-        <!-- </router-link> -->
       </div>
       <p class="article-brief">{{article.brief}}</p>
       <Icon type="md-heart" />

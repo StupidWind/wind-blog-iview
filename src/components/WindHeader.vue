@@ -1,99 +1,32 @@
 <template>
-  <div class="container">
-    <div class="left-nav">
-      <img id="avatar" :src="avatarUrl" />
-      <div id="blog-title">Wind Blog</div>
-    </div>
-
-    <ul class="navbar">
-      <li v-for="menu in menuList" :key="menu.id">
-        <router-link :to="menu.menuUrl" tag="a">{{menu.menuName}}</router-link>
-      </li>
-    </ul>
+  <div>
+    <!-- 导航 -->
+    <sui-segment inverted attached class="m-padded-tb-mini">
+      <div is="sui-container">
+        <sui-menu inverted secondary>
+          <sui-menu-item>
+            <h2 is="sui-header" color="orange">WindBlog</h2>
+          </sui-menu-item>
+          <sui-menu-item>
+            <sui-icon name="home"></sui-icon>首页
+          </sui-menu-item>
+          <sui-menu-item><sui-icon name="idea"></sui-icon>分类</sui-menu-item>
+          <sui-menu-item><sui-icon name="tag"></sui-icon>标签</sui-menu-item>
+          <sui-menu-item><sui-icon name="clone"></sui-icon>归档</sui-menu-item>
+          <sui-menu-item><sui-icon name="comment"></sui-icon>留言板</sui-menu-item>
+          <sui-menu-item><sui-icon name="info"></sui-icon>关于我</sui-menu-item>
+          <sui-menu-item position="right">
+              <sui-input inverted transparent icon="search" placeholder="Search..."></sui-input>
+          </sui-menu-item>
+        </sui-menu>
+      </div>
+    </sui-segment>
   </div>
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      avatarUrl:
-        "https://stupidwind-1300173318.cos.ap-guangzhou.myqcloud.com/avatar/stupid-avatar.jpg",
-      menuList: [
-        { id: 1, menuName: "文章", menuUrl: "/article/list" },
-        { id: 2, menuName: "评论", menuUrl: "/comment/list" },
-        { id: 3, menuName: "留言板", menuUrl: "/leaveMessageBorad/list" },
-        { id: 4, menuName: "友情链接", menuUrl: "/friendshipLink/list"}
-      ]
-    };
-  },
-  methods: {
-    initUserDetails() {}
-  },
-  created() {
-    this.initUserDetails();
-  }
-};
+export default {};
 </script>
 
 <style>
-/* 引入tahoma字体 */
-@font-face {
-  font-family: MyTahoma;
-  src: url(../assets/ttf/Tahoma/tahoma.ttf);
-}
-
-.container {
-  display: flex;
-  width: 100%;
-}
-
-.container > .left-nav {
-  flex: 2 1 120px;
-  display: flex;
-  width: 100%;
-}
-
-.container > .left-nav > #avatar {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  align-self: center;
-}
-
-.container > .left-nav > #blog-title {
-  flex-basis: 200px;
-  margin-left: 15px;
-  font-size: 35px;
-  font-family: MyTahoma, sans-serif;
-  color: dimgray;
-}
-
-.container > .navbar {
-  flex: 8;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: flex-end;
-  margin-right: 40px;
-  margin-bottom: 3px;
-}
-
-.container > .navbar > li {
-  list-style-type: none;
-  font-size: 15px;
-  margin: 0 5px;
-}
-
-.navbar > li > a {
-  color: #666666;
-}
-
-.navbar > li > a:hover {
-  color: #333333;
-}
-
-.navbar > li > a:active {
-  color: black;
-}
 </style>

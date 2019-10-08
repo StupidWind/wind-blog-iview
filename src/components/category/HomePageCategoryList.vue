@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>友情链接列表</h1>
+    <sui-segment></sui-segment>
   </div>
 </template>
 
