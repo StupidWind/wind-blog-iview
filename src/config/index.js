@@ -4,8 +4,9 @@ export default {
     cookieExpires: 1,
     useI18n: false,
     baseUrl: {
-        dev: 'http://localhost:9090',
-        pro: ''
+        // dev: 'http://localhost:9090',
+        dev: 'http://49.235.172.208:9090',
+        pro: 'http://49.235.172.208:9090'
     },
 
     /**
