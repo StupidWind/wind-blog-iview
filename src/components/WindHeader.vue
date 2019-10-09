@@ -8,22 +8,22 @@
             <h2 is="sui-header" color="orange">WindBlog</h2>
           </sui-menu-item>
           <sui-menu-item>
-            <sui-icon name="home"></sui-icon>首页
+            <sui-icon size="mini" name="home"></sui-icon>首页
           </sui-menu-item>
           <sui-menu-item>
-            <sui-icon name="idea"></sui-icon>分类
+            <sui-icon size="mini" name="idea"></sui-icon>分类
           </sui-menu-item>
           <sui-menu-item>
-            <sui-icon name="tag"></sui-icon>标签
+            <sui-icon size="mini" name="tag"></sui-icon>标签
           </sui-menu-item>
           <sui-menu-item>
-            <sui-icon name="clone"></sui-icon>归档
+            <sui-icon size="mini" name="clone"></sui-icon>归档
           </sui-menu-item>
           <sui-menu-item>
-            <sui-icon name="comment"></sui-icon>留言板
+            <sui-icon size="mini" name="comment"></sui-icon>留言板
           </sui-menu-item>
           <sui-menu-item>
-            <sui-icon name="info"></sui-icon>关于我
+            <sui-icon size="mini" name="info"></sui-icon>关于我
           </sui-menu-item>
           <sui-menu-item position="right">
             <sui-input inverted transparent icon="search" placeholder="Search..."></sui-input>
