@@ -19,7 +19,9 @@
         <sui-grid>
           <sui-grid-column width="eleven">
             <h3 is="sui-header">你真的理解什么是财富自由吗？</h3>
-            <p class="m-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa strong. Cum sociis natoque.</p>
+            <p
+              class="m-text"
+            >Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa strong. Cum sociis natoque.</p>
           </sui-grid-column>
           <sui-grid-column width="five">
             <sui-image
@@ -29,35 +31,38 @@
           </sui-grid-column>
         </sui-grid>
         <sui-grid>
-              <sui-grid-column width="eleven">
-                <sui-list link horizontal size="mini">
-                  <sui-list-item>
-                    <sui-image
-                      avatar
-                      src="https://stupidwind-1300173318.cos.ap-guangzhou.myqcloud.com/avatar/stupid-avatar.jpg"
-                    ></sui-image>
-                  </sui-list-item>
-                  <sui-list-item>
-                    <h4 is="sui-header">StupidWind</h4>
-                  </sui-list-item>
-                  <sui-list-item>
-                    <sui-icon name="calendar"></sui-icon>2019-10-01
-                  </sui-list-item>
-                  <sui-list-item>
-                    <sui-icon name="eye"></sui-icon>1000
-                  </sui-list-item>
-                </sui-list>
-              </sui-grid-column>
-              <sui-grid-column width="five" textAlign="right">
-                <sui-label class="m-padded-tiny m-text-thin" color="orange" basic>认知升级</sui-label>
-              </sui-grid-column>
-            </sui-grid>
+          <sui-grid-column width="eleven">
+            <sui-list link horizontal size="mini">
+              <sui-list-item>
+                <sui-image
+                  size="mini"
+                  avatar
+                  src="https://stupidwind-1300173318.cos.ap-guangzhou.myqcloud.com/avatar/stupid-avatar.jpg"
+                ></sui-image>
+              </sui-list-item>
+              <sui-list-item>
+                <h4 is="sui-header">StupidWind</h4>
+              </sui-list-item>
+              <sui-list-item>
+                <sui-icon name="calendar"></sui-icon>2019-10-01
+              </sui-list-item>
+              <sui-list-item>
+                <sui-icon name="eye"></sui-icon>1000
+              </sui-list-item>
+            </sui-list>
+          </sui-grid-column>
+          <sui-grid-column width="five" textAlign="right">
+            <sui-label class="m-padded-tiny m-text-thin" color="orange" basic>认知升级</sui-label>
+          </sui-grid-column>
+        </sui-grid>
       </sui-segment>
-       <sui-segment vertical class="m-padded-tb-large m-padded-lr">
+      <sui-segment vertical class="m-padded-tb-large m-padded-lr">
         <sui-grid>
           <sui-grid-column width="eleven">
             <h3 is="sui-header">你真的理解什么是财富自由吗？</h3>
-            <p class="m-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa strong. Cum sociis natoque.</p>
+            <p
+              class="m-text"
+            >Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa strong. Cum sociis natoque.</p>
           </sui-grid-column>
           <sui-grid-column width="five">
             <sui-image
@@ -67,35 +72,38 @@
           </sui-grid-column>
         </sui-grid>
         <sui-grid>
-              <sui-grid-column width="eleven">
-                <sui-list link horizontal size="mini">
-                  <sui-list-item>
-                    <sui-image
-                      avatar
-                      src="https://stupidwind-1300173318.cos.ap-guangzhou.myqcloud.com/avatar/stupid-avatar.jpg"
-                    ></sui-image>
-                  </sui-list-item>
-                  <sui-list-item>
-                    <h4 is="sui-header">StupidWind</h4>
-                  </sui-list-item>
-                  <sui-list-item>
-                    <sui-icon name="calendar"></sui-icon>2019-10-01
-                  </sui-list-item>
-                  <sui-list-item>
-                    <sui-icon name="eye"></sui-icon>1000
-                  </sui-list-item>
-                </sui-list>
-              </sui-grid-column>
-              <sui-grid-column width="five" textAlign="right">
-                <sui-label class="m-padded-tiny m-text-thin" color="orange" basic>认知升级</sui-label>
-              </sui-grid-column>
-            </sui-grid>
+          <sui-grid-column width="eleven">
+            <sui-list link horizontal size="mini">
+              <sui-list-item>
+                <sui-image
+                  size="mini"
+                  avatar
+                  src="https://stupidwind-1300173318.cos.ap-guangzhou.myqcloud.com/avatar/stupid-avatar.jpg"
+                ></sui-image>
+              </sui-list-item>
+              <sui-list-item>
+                <h4 is="sui-header">StupidWind</h4>
+              </sui-list-item>
+              <sui-list-item>
+                <sui-icon name="calendar"></sui-icon>2019-10-01
+              </sui-list-item>
+              <sui-list-item>
+                <sui-icon name="eye"></sui-icon>1000
+              </sui-list-item>
+            </sui-list>
+          </sui-grid-column>
+          <sui-grid-column width="five" textAlign="right">
+            <sui-label class="m-padded-tiny m-text-thin" color="orange" basic>认知升级</sui-label>
+          </sui-grid-column>
+        </sui-grid>
       </sui-segment>
-       <sui-segment vertical class="m-padded-tb-large m-padded-lr">
+      <sui-segment vertical class="m-padded-tb-large m-padded-lr">
         <sui-grid>
           <sui-grid-column width="eleven">
             <h3 is="sui-header">你真的理解什么是财富自由吗？</h3>
-            <p class="m-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa strong. Cum sociis natoque.</p>
+            <p
+              class="m-text"
+            >Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa strong. Cum sociis natoque.</p>
           </sui-grid-column>
           <sui-grid-column width="five">
             <sui-image
@@ -105,31 +113,31 @@
           </sui-grid-column>
         </sui-grid>
         <sui-grid>
-              <sui-grid-column width="eleven">
-                <sui-list link horizontal size="mini">
-                  <sui-list-item>
-                    <sui-image
-                      avatar
-                      src="https://stupidwind-1300173318.cos.ap-guangzhou.myqcloud.com/avatar/stupid-avatar.jpg"
-                    ></sui-image>
-                  </sui-list-item>
-                  <sui-list-item>
-                    <h4 is="sui-header">StupidWind</h4>
-                  </sui-list-item>
-                  <sui-list-item>
-                    <sui-icon name="calendar"></sui-icon>2019-10-01
-                  </sui-list-item>
-                  <sui-list-item>
-                    <sui-icon name="eye"></sui-icon>1000
-                  </sui-list-item>
-                </sui-list>
-              </sui-grid-column>
-              <sui-grid-column width="five" textAlign="right">
-                <sui-label class="m-padded-tiny m-text-thin" color="orange" basic>认知升级</sui-label>
-              </sui-grid-column>
-            </sui-grid>
+          <sui-grid-column width="eleven">
+            <sui-list link horizontal size="mini">
+              <sui-list-item>
+                <sui-image
+                  size="mini"
+                  avatar
+                  src="https://stupidwind-1300173318.cos.ap-guangzhou.myqcloud.com/avatar/stupid-avatar.jpg"
+                ></sui-image>
+              </sui-list-item>
+              <sui-list-item>
+                <h4 is="sui-header">StupidWind</h4>
+              </sui-list-item>
+              <sui-list-item>
+                <sui-icon name="calendar"></sui-icon>2019-10-01
+              </sui-list-item>
+              <sui-list-item>
+                <sui-icon name="eye"></sui-icon>1000
+              </sui-list-item>
+            </sui-list>
+          </sui-grid-column>
+          <sui-grid-column width="five" textAlign="right">
+            <sui-label class="m-padded-tiny m-text-thin" color="orange" basic>认知升级</sui-label>
+          </sui-grid-column>
+        </sui-grid>
       </sui-segment>
-      
     </sui-segment>
 
     <!-- footer -->

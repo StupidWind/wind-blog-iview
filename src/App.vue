@@ -24,10 +24,10 @@ export default {
 <style>
 /* padded */
 .m-padded-mini {
-  padding: 0.2em !important
+  padding: 0.2em !important;
 }
 .m-padded-tiny {
-  padding: 0.3em !important
+  padding: 0.3em !important;
 }
 .m-padded-tb-mini {
   padding-top: 0.2em !important;
@@ -70,6 +70,22 @@ export default {
   padding-right: 2em !important;
 }
 
+/* margin */
+.m-margin-tb-tiny {
+  margin-top: 0.3em !important;
+  margin-bottom: 0.3em !important;
+}
+.m-margin-tb-small {
+  margin-top: 0.4em !important;
+  margin-bottom: 0.4em !important;
+}
+.m-margin-top-large {
+  margin-top: 1.4em !important;
+}
+.m-margin-bottom-large {
+  margin-bottom: 1.4em !important;
+}
+
 /* text */
 .m-text {
   font-weight: 300 !important;
@@ -97,8 +113,14 @@ export default {
   display: inline-block !important;
 }
 
+/* container */
 .m-container {
   max-width: 72em !important;
   margin: auto !important;
+}
+
+/* color */
+.m-black {
+  color: #333 !important;
 }
 </style>
