@@ -1,8 +1,8 @@
 <template>
   <div>
     <sui-segment inverted vertical class="m-padded-tb-massive">
-      <sui-container>
-        <sui-grid inverted divided>
+      <sui-container textAlign="center">
+        <sui-grid inverted stackable divided>
           <sui-grid-column width="three">
             <sui-list inverted>
               <sui-list-item>

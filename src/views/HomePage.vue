@@ -1,7 +1,7 @@
 <template>
   <div class="m-padded-tb-large">
     <sui-container>
-      <sui-grid>
+      <sui-grid stackable>
         <sui-grid-column width="eleven">
           <!-- 左侧博客列表 -->
           <article-list></article-list>

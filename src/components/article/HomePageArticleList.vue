@@ -16,7 +16,7 @@
     <!-- content -->
     <sui-segment attached>
       <sui-segment vertical class="m-padded-tb-large m-padded-lr">
-        <sui-grid>
+        <sui-grid reversed="mobile" stackable>
           <sui-grid-column width="eleven">
             <h3 is="sui-header">你真的理解什么是财富自由吗？</h3>
             <p
@@ -41,7 +41,7 @@
                 ></sui-image>
               </sui-list-item>
               <sui-list-item>
-                <h4 is="sui-header">StupidWind</h4>
+                <h4 is="sui-header" class="m-padded-bottom-middle">StupidWind</h4>
               </sui-list-item>
               <sui-list-item>
                 <sui-icon name="calendar"></sui-icon>2019-10-01
@@ -57,7 +57,7 @@
         </sui-grid>
       </sui-segment>
       <sui-segment vertical class="m-padded-tb-large m-padded-lr">
-        <sui-grid>
+        <sui-grid reversed="mobile" stackable>
           <sui-grid-column width="eleven">
             <h3 is="sui-header">你真的理解什么是财富自由吗？</h3>
             <p
@@ -82,7 +82,7 @@
                 ></sui-image>
               </sui-list-item>
               <sui-list-item>
-                <h4 is="sui-header">StupidWind</h4>
+                <h4 is="sui-header" class="m-padded-bottom-middle">StupidWind</h4>
               </sui-list-item>
               <sui-list-item>
                 <sui-icon name="calendar"></sui-icon>2019-10-01
@@ -98,7 +98,7 @@
         </sui-grid>
       </sui-segment>
       <sui-segment vertical class="m-padded-tb-large m-padded-lr">
-        <sui-grid>
+        <sui-grid reversed="mobile" stackable>
           <sui-grid-column width="eleven">
             <h3 is="sui-header">你真的理解什么是财富自由吗？</h3>
             <p
@@ -123,7 +123,7 @@
                 ></sui-image>
               </sui-list-item>
               <sui-list-item>
-                <h4 is="sui-header">StupidWind</h4>
+                <h4 is="sui-header" class="m-padded-bottom-middle">StupidWind</h4>
               </sui-list-item>
               <sui-list-item>
                 <sui-icon name="calendar"></sui-icon>2019-10-01

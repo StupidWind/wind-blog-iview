@@ -69,6 +69,9 @@ export default {
   padding-left: 2em !important;
   padding-right: 2em !important;
 }
+.m-padded-bottom-middle {
+  padding-bottom: 1.2em !important;
+}
 
 /* margin */
 .m-margin-tb-tiny {
