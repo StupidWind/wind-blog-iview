@@ -22,6 +22,10 @@ export default {
 </script>
 
 <style>
+body {
+  background: url("https://stupidwind-1300173318.cos.ap-guangzhou.myqcloud.com/wallpaper/memphis-colorful.png")
+}
+
 /* padded */
 .m-padded-mini {
   padding: 0.2em !important;
