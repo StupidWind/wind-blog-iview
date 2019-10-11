@@ -120,6 +120,13 @@ body {
   display: inline-block !important;
 }
 
+/* positon */
+.m-right-top {
+  position: absolute;
+  top: 18px;
+  right: 16px;
+}
+
 /* container */
 .m-container {
   max-width: 72em !important;
@@ -130,4 +137,15 @@ body {
 .m-black {
   color: #333 !important;
 }
+
+.m-mobile-show {
+  display: none !important;
+}
+
+@media screen and (max-width: 768px) {
+  .m-mobile-show {
+    display: block !important;
+  }
+}
+
 </style>
