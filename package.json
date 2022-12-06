@@ -13,7 +13,7 @@
     "axios": "^0.19.0",
     "iview": "^3.5.0",
     "mavon-editor": "^2.7.6",
-    "qs": "^6.8.0",
+    "qs": "^6.8.3",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-vue": "^0.8.1",
     "vue": "^2.5.2",
